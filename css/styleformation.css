@@ -1,0 +1,245 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    
+}
+#part-formation{
+    line-height: 2em;
+    padding: 10% 3% ;
+    display: grid;
+    gap: 50px 30px;/****Espace entre deux grid*******/
+    grid-template-columns: repeat(auto-fit /* Nombre de gid, exemple 3 4 5, auto-fit pour qu'il se règle automatiquement**/, minmax(250px, 2fr) );/***Permet de mettre en responsive la grid***/
+ 
+}
+
+#formation-titre{
+    font-size: 54px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+#formation-text{
+    font-size: 24px;
+    margin-top: -20px;
+}
+
+#explication-formation{
+    grid-column: auto / span 2;
+    padding: 0px 0px 50px;
+    
+}
+
+/***************************ANNIMATION DU FOND DE LA LISTE*****************************/
+.list-formation{
+    padding: 20px;
+    border: #d5e3ec solid 0.1px;
+    border-radius: 5px;
+    margin: -5px 3px 5px -3px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    box-shadow: 6px 6px 20px -15px rgba(0, 0, 0, 0.459);
+}
+.fond-list:hover {
+    border: #4869ee solid 0.1px;
+    transition: 0.25s ease-in-out;
+    transform: rotate(3deg); /* Équivalent à rotateZ(45deg) */
+
+}
+.fond-list:hover .list-formation{/* premier plan */
+    border: #4869ee solid 0.1px;
+    transition: 0.25s ease-in-out;
+    box-shadow: 6px 6px 20px -15px rgba(0, 0, 0, 0.459);
+    transform: rotate(4deg); /* Équivalent à rotateZ(45deg) */
+}
+.fond-list:hover .fond-list2{/* troisième plan */
+    border: #4869ee solid 0.1px;
+    transition: 0.25s ease-in-out;
+    transform: rotate(-7deg); /* Équivalent à rotateZ(45deg) */
+    
+}
+.fond-list{/* troisième plan */
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    border: #d5e3ec solid 0.1px;
+    
+    
+}
+.fond-list2{
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    border: #d5e3ec solid 0.1px;
+}
+/***************************ANNIMATION DU FOND DE LA LISTE*****************************/
+
+
+/***************************INSCRIPTION*****************************/
+
+#section-inscription{
+    padding: 10% 10%  15%;  
+    background: url(../images/fond-inscription2.jpg) no-repeat fixed /*pour fixer l'image*/ 50% 50%;
+    background-size: cover; 
+}
+
+#border-inscription{
+    
+    width: 400px;
+    border: #d5e3ec solid 3px;
+    background-color: #F4F6F6;
+    padding: 5% 4%;
+    border-radius: 5px;
+}
+.form-groupe>input{
+    padding: 12px 18px;
+    margin-top: 7px;
+    width: 90%;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: none;
+    background-color: #f7fafb;
+    border: #d5e3ec solid 1px;
+}
+.form-groupe{
+    margin-top: 30px;
+}
+.form-groupe > input{
+    background-color: #e8f0fe;
+}
+#sub-inscription{
+    margin: 0px 31.5%;
+}
+#sub-inscription h1{
+    text-align: center;
+}
+
+
+
+input:focus{
+    outline: none;
+    outline: #81bee4e3 solid 2px;
+}
+.form-btn {
+    margin: 30px -5px 0px;
+    background-color: #4869ee;
+    padding: 12px 20px;
+    color: aliceblue;
+    border-radius: 7px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+.form-btn:hover{
+    background-color: transparent;
+    color: #4869ee;
+    outline: #4869ee solid 1.5px;
+    transition: 0.29s ease-in-out;
+}
+
+
+
+
+
+
+/***************************HTML5*****************************/
+#section-html-un {
+    padding: 9% 2.5% 7% 2.5%;
+    background: url(../images/3.jfif) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0.92;
+    color: #3b3339e7;
+    font-size: 1.1em;
+    text-align: justify;
+   
+}
+#section-html-deux{
+    padding: 2% 2.5% 4% 2.5%;   
+}
+    
+#article-html-un{
+    
+    font-size: 1.2em;
+    line-height: 2em;
+    display: grid;
+    gap: 10px 100px;/****Espace entre deux grid*******/
+    grid-template-columns: repeat(auto-fit /* Nombre de gid, exemple 3 4 5, auto-fit pour qu'il se règle automatiquement**/, minmax(250px, 2fr) );/***Permet de mettre en responsive la grid***/  
+}
+#article-html-un > div{
+    grid-column: auto / span 2;
+}
+#chemin a{
+    font-size: 0.85em;
+    color: #2e2e31;
+    font-weight: bold;
+}
+
+#html-presentation{
+    font-size: 1.05em;
+    display: grid;
+    gap: 10px 100px;/****Espace entre deux grid*******/
+    grid-template-columns: repeat(3 /* Nombre de gid, exemple 3 4 5, auto-fit pour qu'il se règle automatiquement**/, minmax(250px, 2fr) );/***Permet de mettre en responsive la grid***/  
+}
+#section-html-deux h1{
+    font-size: 2em;
+}
+#section-html-un h1{
+    color: #F16529;
+    font-size: 2.5em;
+   
+   
+}
+.list-presentation{
+    grid-column: auto / span 2;
+    padding-left: 70px;
+    line-height: 2em;
+    text-align: justify;
+}
+.list-chapitre{
+    grid-column: auto / span 1;
+    width: 115%;
+    font-size: 1em;
+}
+.tableau-chapitre{
+    padding: 20px 0 0;
+    border: 2px #d5e3ec solid;
+    margin: 30px 0 0;
+    box-shadow: 1px 3px 25px -18px rgba(0, 0, 0, 0.63);
+    background-color: #ffff;
+    border-radius: 5px;
+}
+.tableau-chapitre  h2{
+    margin-left: 25px;
+}
+.tableau-chapitre >div> a{
+    padding: 15px 0 15px 25px; 
+    cursor: pointer; 
+    font-size: 0.89em;
+    border-top: #d5e3ec solid 1px;
+    color: #121c42;
+    font-weight: 600;
+}
+.tableau-chapitre  >div> a:hover{
+    background-color: #d2d6d850;
+    transition: 0.275s ease-in-out;
+}
+.type-document{
+    background: url(../images/pdf4.png) no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 22px; 
+    margin-right: 10px;  
+}
+.box-presentation{
+    display: flex; gap: 50px;
+}
+
+.box-presentation div{
+    margin-top: 50px;
+    padding: 5px 50px 0px 20px;
+    border-radius: 7px;
+    background-color: #e6eff4;
+}
+.box-presentation li{
+    list-style-type: circle;
+}
+.box-presentation h3{
+    font-weight: bolder;
+    margin-left: -25px;
+}

@@ -1,0 +1,396 @@
+html{
+	scroll-behavior: smooth; /*permettre de decendre ou de monter en douceur avec un clic*/
+  
+}
+/***********************SCROLL****************************/
+/* Barre de scroll */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Fond */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* corps */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 150px 150px;
+  }
+  
+  /* Effet sur la barre de scroll lors du survol */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+/***********************SCROLL****************************/
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background-color: #F4F6F6 ;/* #C6CBCF8*/
+    color: #121c42;
+}
+#nav-titre{
+    font-size: 1.7em;
+}
+nav{
+    position: fixed; /*permet d'imobiliser cette partie*/
+    width: 100%; /*largeur*/
+    opacity: 0.9;
+    box-shadow: 0 0 5px grey;
+    background-color: white;
+    z-index: 200;
+}
+#nav-titre{
+    font-weight: bold;
+    
+    
+}
+nav  ul li{
+	float: right;
+	position: relative;
+    margin-top: 10px;
+}
+#nav-search,#cursus,#formation,#profil{
+    float: right;
+   
+}
+.cercle{
+    padding: 5px 9px;
+    border: #121c42 solid 2px;
+    border-radius: 60px;
+    margin: -10px -13px 2px -13px;
+}
+.cercle:hover{
+    border: #4869ee solid 2px;
+}
+#recherche{
+    margin: -15px 0px 0px 13%;
+    padding: 12px 28px;
+    border-radius: 15px;
+    border: none;
+    background-color:#F4F6F6;
+    width: 30%;
+    outline: none;
+}
+
+
+/***********************Effet nav******************************/
+
+/***
+nav ul::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+****/
+nav li{
+	list-style-type: none;
+
+}
+nav ul li{
+	float: right;
+	position: relative;
+    margin-right: 50px;
+    padding: 0px 10px;
+}
+.subMenu{
+	display: none;
+    width: 190px;
+    padding: 0px 25px;
+    background-color: white;
+    box-shadow: 0 0 3px grey;
+    border-radius: 7px;
+    
+    /**padding-right: -50px;**/
+}
+nav a{
+	display: inline-block;
+	text-decoration: none;
+
+}
+
+nav ul li a{
+	font-size: 1.1em;
+    color: #121c42;	
+}
+nav li:hover .subMenu{ /*Afficher le subMenu quand la sourie passe au dessus de nav li*/
+	display: inline-block;
+	position: absolute;
+    border: #4869ee solid 0.1px;
+	top: 100%;
+	right: -25px;
+	z-index: 1000;
+	
+}
+nav li:hover .cercle{
+    border: #4869ee solid 2px;
+    color: #4869ee;
+}
+.subMenu li{
+	
+    margin-right: -30px;
+    padding-bottom: 5px;
+    line-height: 10px;
+    
+}
+.subMenu li a{
+	font-size: 13px;
+	color: #222538;
+	width: 90px;
+
+    padding: 19px 70px;
+    
+}
+#connecter{
+    margin-bottom: -5px;
+}
+#creer{
+    margin-top: -18px;
+}
+.subMenu li:hover a{
+	color: black;
+	transition: 0.25s ease-in-out;
+    background-color:#e7e5e5ce;
+    border-radius: 5px;
+}
+
+
+/***********************Arcticle******************************/
+#information{
+    margin-bottom: 5%;
+    
+}
+#part-un{
+    padding: 11% 0 0 2.5% ;
+    display: flex; 
+    gap: 50px;
+}
+#text-principale{
+    width: 90%;
+}
+#presentation{
+    font-size: 1.5em;
+    text-align: justify;
+    line-height: 1.5em;
+}
+#image-principale{
+    position: relative;
+    width: 90%;
+    background:  url(../images/livre2.png) no-repeat 50% 50%; 
+	background-size: 630px;
+    height: 400px;
+    margin-right: 20px;
+    
+}
+#img-mignon{
+    position: absolute;
+    left: 8%;
+    bottom: 15px;
+    height: 280px;
+    
+}
+
+
+#interrogation-un::after{
+    content: "?";
+    position: absolute;
+    left: 235px;
+    bottom: 250px;
+    rotate: 47deg;
+    font-size: 3em;  
+    animation: animation 4s infinite ease-in-out;
+    
+    
+}
+@keyframes animation {
+    0%{
+        font-size: 5em;
+        opacity: 1;
+        color: rgba(255, 102, 0, 0.829);
+    }
+    50%{
+        font-size: 3em;
+        opacity: 0.3;
+        color: rgb(255, 102, 0);
+    }
+    100%{
+        font-size: 5em;
+        opacity: 1;
+        color: rgba(255, 102, 0, 0.829);
+    }
+}
+#image-principale::after{
+    content: "?";
+    position: absolute;
+    left: 210px;
+    bottom: 270px;
+    font-size: 3em;  
+    rotate: 5deg;
+    animation: animation-deux 4s infinite ease-in-out;
+    
+    
+}
+@keyframes animation-deux {
+    0%{
+        font-size: 3em;
+        opacity: 0.3;
+        color: rgba(255, 102, 0, 0.829);
+    }
+    50%{
+        font-size: 5em;
+        opacity: 1;
+        color: rgb(255, 102, 0);
+    }
+    100%{
+        font-size: 3em;
+        opacity: 0.3;
+        color: rgba(255, 102, 0, 0.829);
+    }
+}
+#compte,#documentation{
+    margin: 0px 15px;
+    padding: 17px 20px;
+    border-radius: 5px;
+}
+#compte{
+    background-color: #4869ee;
+    color: #ffff;
+    font-weight: bold;
+}
+#documentation{
+    color:#4869ee;
+    font-weight: bold;
+    border: #4869ee solid 2px;
+}
+#bouton{
+    margin-top: 90px;
+    
+}
+a{
+    text-decoration: none;
+}
+
+
+/**********************ARTICLE DEUX***********************/
+#format{
+    background-color: #f7fafb;
+    padding: 11% 2.5% 4% 2.5%;
+    font-size: 1.5em;
+    display: grid;
+    gap: 10px 100px;/****Espace entre deux grid*******/
+    grid-template-columns: repeat(auto-fit /* Nombre de gid, exemple 3 4 5, auto-fit pour qu'il se règle automatiquement**/, minmax(250px, 2fr) );/***Permet de mettre en responsive la grid***/
+    
+}
+#titre-deux{
+    grid-column: auto / span 2;
+}
+.tableau{
+    border:none;
+    background-color: #ffff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: 1px 3px 28px -12px rgba(0, 0, 0, 0.63);
+    
+}
+.sous-tableau{
+    border-bottom: black solid 1px;
+    width: 100%;
+    padding: 15px 0;  
+}
+.description{
+    font-size: 0.7em;
+    color: #121c4299;
+}
+a:hover{
+    color: #4869ee;
+}
+.logo{
+    width: 40px;
+    float: left;
+    margin-right: 25px;
+}
+
+/**********************ARTICLE DEUX***********************/
+#part-deux{
+    margin: 7% 20% 4% 20%;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    
+}
+#tableau-deux{
+    border: #d5e3ec solid 3px;
+    width: 50%;
+    margin: 100px auto 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 28px -17px rgba(0, 0, 0, 0.63);
+    background-color: #ffff;
+}
+#tableau-deux>div{
+    border-bottom: #d5e3ec solid 3px;
+    padding: 18px 0px;
+    font-size: 0.8em;
+}
+#compte:hover{
+    opacity: 0.7;
+    transition: 0.27s ease-in-out;
+}
+#documentation:hover{
+    background-color: #4869ee;
+    color: white;
+    transition: 0.27s ease-in-out;
+}
+
+
+/**********************FOOTER************************/
+
+#footer{
+    border-top: #d5e3ec solid 3px;
+    display: grid;
+    padding: 3% 2.5% 4%;
+    line-height: 2em;
+    gap: 10px 15px;/****Espace entre deux grid*******/
+    grid-template-columns: repeat(5 /* Nombre de gid, exemple 3 4 5, auto-fit pour qu'il se règle automatiquement**/, minmax(250px, 1fr) );/***Permet de mettre en responsive la grid***/
+
+}
+#footer p{
+    color: #121c4299;
+}
+#retrouver{
+    grid-column: auto / span 2;
+}
+#tweets{
+    grid-column: auto / span 2;
+}
+
+li{
+    list-style-type: none;
+}
+.icone{
+    margin: 0px 10px 0px -20px;
+
+}
+
+#haut{
+    border-radius: 7px;
+    background-color: rgba(0,0,0,.3);
+    padding: 6px 15px;
+    float: right;
+    margin: 30px 10px 0 0;
+}
+#haut:hover{
+    transition: 0.27s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+
+
+
+
+
